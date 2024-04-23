@@ -69,3 +69,24 @@
 * 요소의 너비와 높이
 * 절대값px, 상대값%, 화면 상대값 vw, vh
 * 상대값 처리는 0~100% 사이 값만 사용한다.
+## form 요소와 속성
+### `<form action="#" method=""></form>`
+* action : 폼 데이터를 제출할 서버 스크립트 지정
+* method : 폼 데이터를 제출하는 방법
+### `<input type="" name="">`
+* type : input 요소가 나타낼 입력 필드의 종류를 정합니다.
+* name : input 요소의 이름을 지정합니다. (데이터 구분)
+* readonly : 읽기전용으로 사용자가 수정 및 내용을 쓸수가 없다.
+* autofocus, autocomplete : 검색창 및 아이디창에서 사용하며 autofocus는 커서가 깜빡거림을 주고, autocomplete 아래로 검색했던 목록을 자동으로 보여주는 것
+* value : input 요소의 초기값을 지정합니다.
+* placeholder : 안내사항등을 입력하여 보여주고 사용자가 값을 넣으면 알아서 사라짐
+* value와 placeholder의 차이점 : 
+* maxlength : 크기 size와 글자 수 제한설정
+### `<textarea></textarea>`
+* rows,  cols : 입력칸의 사이즈를 나타낸다.
+* 사용용도 및 주의사항 : html에서 값을 주는 것보다 css에서 처리하는것이 더 좋다.
+### input의 입력양식과 선택양식
+* text, url 등의 사용자가 직접입력가능한 입력양식
+* radio 등의 사용자의 입력이 아닌 선택으로 들어가는 선택양식
+* `name` : 입력양식(데이터구분용), 선택양식(데이터구분(개별데이터X, 그룹데이터구분용))
+* `value` : 입력양식(초기값), 선택양식(개별데이터구분용)
