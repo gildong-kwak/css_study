@@ -1,0 +1,54 @@
+html, body {background-color:pink;}
+main {
+    width:1024px;
+    margin:0 auto;
+    background-color:#f5f5f5;
+    font-family:"Noto Sans KR", sans-serif;
+}
+main h1 {
+    text-align:center;
+    margin:41px 0 41px;
+}
+main h1 a {}
+main h1 a img {}
+main h1 a img {}
+main .law {
+    width:612px;
+    background-color:black;
+    text-align:center;
+    margin:40px 206px 54px;
+    width:600px; height:200px;
+    overflow-y:scroll;
+    overflow-x:ayto;
+}
+main .law h2 {}
+main .law h3 {}
+main .law p {}
+main #join_frm {}
+main #join_frm .user_info {}
+main #join_frm .user_info dl {}
+main #join_frm .user_info dl dt {background-color:yellow;
+    width:20px;
+}
+main #join_frm .user_info dl dt dd {background-color:lime;}
+main #join_frm .user_info dl dt dd:nth-child(3) {background-color:aqua;}
+main #join_frm .user_info dl dt dd input {}
+main #join_frm .user_info dl dt dd button {}
+main #join_frm .user_info dl dt dd span {}
+main #join_frm .user_info dl dt dd select {}
+main #join_frm .user_info dl dt dd label {}
+main #join_frm .user_info .join_btn {}
+main #join_frm .user_info .join_btn button {}
+/* 성별 */
+main #join_frm .user_info dl dt dd input[name*=gender] {display:none;}
+main #join_frm .user_info dl dt dd input[name*=gender]:checked+label {
+    background-color:blue;
+    background-image:url(../images/gender_checked.svg);
+}
+main #join_frm .user_info dl dt dd label[for*=user_gen] {
+    background-color:purple;
+    background-image:url(../images/gender_unchecked.svg);
+    background-repeat:no-repeat;
+    padding-left:37px;
+    display:inline-block;
+}
