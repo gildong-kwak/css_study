@@ -90,3 +90,64 @@
 * radio 등의 사용자의 입력이 아닌 선택으로 들어가는 선택양식
 * `name` : 입력양식(데이터구분용), 선택양식(데이터구분(개별데이터X, 그룹데이터구분용))
 * `value` : 입력양식(초기값), 선택양식(개별데이터구분용)
+## CSS Layout
+### float, flex
+* `float` : 형제 관계에 해당하는 block or inline tag 왼쪽, 오른쪽 정렬할 때 사용
+* 예 : ul-li*3개 정렬 `ul li {float:left;}`
+* `flex` : 정렬하고자 하는 아이템의 부모한테 flex를 먼저 설정한다.
+* 예 : ul-li*3개 정렬 `ul {display:flex;}`
+* flex 설정 시 **기본값** : 메인축(수평) 교차축(수직)
+* `display:flex` : 정렬대상의 부모 설정 속성값, 설정 시 해당 부모 기준 자식까지(자손X) flexible box layout으로 처리하겠다!
+### flex 적용하기
+* `flex-direction`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. container안의 item의 메인축 방향을 설정합니다.
+3. `row` : 왼쪽->오른쪽 수평축 (기본값)
+4. `row-reverse` : 오른쪽->왼쪽
+5. `column` : 위->아래 수직축 변경
+6. `column-reverse` : 아래->위
+* `flex-wrap`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. container 내부 items 줄바꿈처리를 설정합니다.
+3. `wrap` : 기본값(자동 줄바꿈) ex) 1 2 3
+4. `wrap-reverse` : 행 기준 역방향으로 자동 줄바꿈 처리
+5. `nowrap` : 줄바꿈하지 않음(한 줄 처리) 가변너비에 따라 자동으로 % 크기 변경
+* `flex-flow`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. flex-direction과 flex-wrap을 묶음으로 처리할 수 있습니다.
+3. `flex-direction` : column + flex-wrap:nowrap 일 경우(아래)
+4. `flex-flow` : column nowrap 이라고 작성 가능
+* `justify-content`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. 메인축의 정렬방법을 설정합니다.
+3. `flex-start` : items의 시작점 container의 시작점으로 정렬
+4. `flex-end` : items의 시작점 container의 끝점으로 정렬
+5. `center` : items을 메인축 기준 container에서 가운데 정렬
+6. `space-between` : items을 container의 start, end 양끝 items을 배치하고 나머지는 고르게 정렬
+7. `space-around` : items을 container안에서 균등한 여백을 포함하여 정렬
+* `align-content`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. 교차축의 아이템이 2줄 이상일 경우 정렬방법입니다.
+3. **flex-wrap:wrap 적용한 상태로 확인하세요.**
+4. `stretch` : 기본값(교차축 기준으로 아이템 늘리기)
+5. `flex-start` : container의 start지점 기준 item 정렬
+6. `flex-end` : container의 end 지점 기준 item 정렬
+7. `center` : container의 가운데 위치 기준 item 정렬
+8. `space-between` : container의 start, end 에 양쪽 끝 맞추고 나머지 item 균등하게 정렬
+9. `space-around` : container에서 모든 item 균등하게 정렬
+* `align-items`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. 교차축의 아이템이 1줄 일 경우 정렬방법입니다.
+3. `stretch` : (기본값) 교차축 방향 시작지점에 맞춰서 정렬(start와 거의 차이 없음)
+4. `flex-start` : 교차축 기준 container의 시작지점에 맞춰서 정렬(왼쪽 / 위)
+5. `flex-end` : 교차축 기준 container의 종료지점에 맞춰서 정렬(오른쪽/아래)
+6. `center` : 교차축 기준 container의 가운데지점에 맞춰서 정렬(수직중앙, 수평중앙)
+7. `baseline` : 교차축 기준 container의 시작지점에 맞춰서 정렬(왼쪽 / 위)
+* `align-self`
+1. item에 적용하는 속성 (=자식한테 적용한다)
+2. container에 적용하는 align-items보다 우선순위가 높습니다.
+3. flex box의 교차축을 정렬합니다.
+4. `flex-start` : 교차축 기준 container의 start 시작 위치(top or left)
+5. `flex-end` : 교차축 기준 container의 end 종료 위치(bottom or right)
+6. `center` : 교차축 기준 container의 center 중심 위치(center, middle)
+7. `baseline` : 교차축 기준 container의 baseline 위치(내용 크기에 따라 다름(기본은 start동일))

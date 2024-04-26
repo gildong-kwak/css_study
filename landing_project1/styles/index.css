@@ -1,0 +1,141 @@
+main {}
+/* 배경 공통.bg & 개별.bg1 값 */
+main .bg {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .bg1 {
+    background-image: url(../images/bg.jpg);
+    height: 824px;
+}
+/* ---------------------------------------------------------------------------------------------1.표지 */
+main .bg1 section {
+    /* background-color: purple; */
+    width: 1250px;
+    margin: 0 auto;
+}
+main .bg1 section h1 {}
+main .bg1 section h1 a {}
+main .bg1 section h1 a img {}
+main .bg1 section h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 4.375rem;
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+    margin: 45px 0 47px;
+}
+main .bg1 section h2 em {
+    font-weight: 700;
+}
+main .bg1 section .sponsor_link::after {
+    content: '';
+    background-image: url(../images/btn_right_arrow.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+main .bg1 section .sponsor_link {
+    /* 0% FE9300, 100% FF7300 */
+    /* CSS 회전각도단위 deg */
+    background: linear-gradient(90deg, #FE9300, #FF7300);
+    /* gradient적요을 위해 background통합속성을 사용했을 때 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(before, after)를 활용하는 것을 권장한다. */
+    display: flex;/* display: block; */ /* -> flex 이용으로 값 바꿔줌 */
+    justify-content: center; /* flex사용 */
+    align-items: center; /* flex사용 */
+    margin: 0 auto;
+    width: 409px;
+    height: 71px; /* flex사용으로 다시 넣어줌 */
+    /* line-height: 71px; */ /* height:71px; -> line-height:71px; 모양의 높이에서 글자를 중간으로 주려면 글자 높이로 바꿔준다. */ /* flex사용으로 가려줌 */
+    border-radius: 50px;
+    color: #fff;
+    /* text-align: center; */ /* flex사용으로 가려줌 */
+    font-size: 2.125rem;
+    font-weight: 700;
+}
+main .bg1 section .sponsor_question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    float: right;
+    width: 420px;
+    line-height: 51px;
+    border-radius: 50px;
+    color: #fff;
+    /* text-align: center; */
+    font-size: 1.625rem;
+    margin-top: 95px; /* margin: 95px 0 0; */
+}
+main .bg1 section .sponsor_question::before,
+main .bg1 section .sponsor_question::after {
+    content: '';
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+main .bg1 section .sponsor_question::before {
+    background-image: url(../images/icon_sms.svg);
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+main .bg1 section .sponsor_question::after {
+    background-image: url(../images/btn_right_arrow_2.svg);
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+}
+/* --------------------------------------------------------------------------------2-퀴즈 */
+main .bg2 {
+    background-image: url(../images/bg_2.jpg);
+    height: 500px;
+}
+main .bg2 section {
+    background-color: pink;
+    width: 1250px;
+    margin: 0 auto;
+}
+/* 퀴즈 */
+main .bg2 #quiz {
+    background-color: purple;
+    width: 450px;
+    height: 407px;
+    display: inline-block;
+}
+main .bg2 #quiz .wwf_quiz {}
+main .bg2 #quiz .wwf_quiz h2 {
+    color: #fff;
+    font-size: 3.438rem;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+}
+main .bg2 #quiz .wwf_quiz p {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+main .bg2 #quiz .wwf_quiz .quiz_list {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+main .bg2 #quiz .wwf_quiz .quiz_list li {}
+main .bg2 #quiz .wwf_quiz .quiz_list li input {}
+main .bg2 #quiz .wwf_quiz .quiz_list li label {}
+main .bg2 #quiz .wwf_quiz p {}
+main .bg2 #quiz .wwf_quiz p #quiz_btn {}
+/* 퀴즈 참여 현황 */
+main .bg2 .quiz_situation {
+    background-color: purple;
+    width: 488px;
+    height: 271px;
+    display: inline-block;
+}
+main .bg2 .quiz_situation .status {}
+main .bg2 .quiz_situation .status h2 {}
+main .bg2 .quiz_situation .contents {}
+main .bg2 .quiz_situation .contents em {}
+main .bg2 .quiz_situation .contents span {}
+main .bg2 .quiz_situation .contents strong {}
+main .bg2 .quiz_situation p {}
