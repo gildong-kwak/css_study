@@ -4,16 +4,12 @@ main .bg {
     background-position: center;
     background-repeat: no-repeat;
 }
-main .bg1 {
-    background-image: url(../images/bg.jpg);
-    height: 824px;
-}
+main .bg > section {width: 1250px; margin: 0 auto;}
+main .bg1 {background-image: url(../images/bg.jpg); height: 824px;}
+main .bg2 {background-image: url(../images/bg_2.jpg);}
+    /* height: 500px; */ /* 여백은 내용의 여백을 주면서 커지게하는게 좋음 */
 /* ---------------------------------------------------------------------------------------------1.표지 */
-main .bg1 section {
-    /* background-color: purple; */
-    width: 1250px;
-    margin: 0 auto;
-}
+main .bg1 section {/* background-color: purple; */}
 main .bg1 section h1 {}
 main .bg1 section h1 a {}
 main .bg1 section h1 a img {}
@@ -87,55 +83,108 @@ main .bg1 section .sponsor_question::after {
     height: 25px;
 }
 /* --------------------------------------------------------------------------------2-퀴즈 */
-main .bg2 {
-    background-image: url(../images/bg_2.jpg);
-    height: 500px;
-}
-main .bg2 section {
-    background-color: pink;
-    width: 1250px;
-    margin: 0 auto;
-}
+main .bg2 section {/* background-color: pink; */}
 /* 퀴즈 */
-main .bg2 #quiz {
-    background-color: purple;
-    width: 450px;
-    height: 407px;
-    display: inline-block;
+main .bg2 section {
+    display: flex; /* flex의  item기본 메인축 정렬은 수평 */
 }
-main .bg2 #quiz .wwf_quiz {}
-main .bg2 #quiz .wwf_quiz h2 {
+main .bg2 section > * {
+    /* width: 50%; */ /* flex를 주면 너비 필요 없이 flex 값을 준다 -> */ flex:1;
+    /* background-color: purple; */
+}
+main .bg2 section #quiz {
+    padding: 54px 0 55px;
+}
+main .bg2 section #quiz .wwf_quiz {}
+main .bg2 section #quiz .wwf_quiz h2 {
     color: #fff;
     font-size: 3.438rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.1px;
+    margin: 0 0 38px; /* margin-top:54px; margin-bottom:38px; */
+    width: 450px; /* 퀴즈버튼의 너비 기준으로 */ text-align: center; /* 퀴즈 가운데로 배치  */
 }
-main .bg2 #quiz .wwf_quiz p {
+main .bg2 section #quiz .wwf_quiz h2+p {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.7; /* 나중에 두줄처리 했을때를 위하여 써줌 */
+}
+main .bg2 section #quiz .wwf_quiz .quiz_list {
+    margin: 0 0 27px; /* ul과 아래 버튼의 간격 */
     color: #fff;
     font-size: 1.25rem;
     line-height: 1.7;
 }
-main .bg2 #quiz .wwf_quiz .quiz_list {
-    color: #fff;
-    font-size: 1.25rem;
-    line-height: 1.7;
+main .bg2 section #quiz .wwf_quiz .quiz_list li {
+    margin: 0 0 20px;
 }
-main .bg2 #quiz .wwf_quiz .quiz_list li {}
-main .bg2 #quiz .wwf_quiz .quiz_list li input {}
-main .bg2 #quiz .wwf_quiz .quiz_list li label {}
-main .bg2 #quiz .wwf_quiz p {}
-main .bg2 #quiz .wwf_quiz p #quiz_btn {}
-/* 퀴즈 참여 현황 */
-main .bg2 .quiz_situation {
-    background-color: purple;
-    width: 488px;
-    height: 271px;
+main .bg2 section #quiz .wwf_quiz .quiz_list li:last-child {margin: 0;} /* 맨아래 li의 여백은 필요가 없으므로 마진값을 따로준다.(=초기화) */
+main .bg2 section #quiz .wwf_quiz .quiz_list li input[name=quiz_q] {display: none;} /* 기본체크 모양 없애기 */
+main .bg2 section #quiz .wwf_quiz .quiz_list li label {
+    background-image: url(../images/quiz_unchecked.svg);
+    background-repeat: no-repeat; /* 반복되지 않게 */
+    padding-left: 48px; /* height: 32px; */ line-height: 32px; /* 글씨체로 여백을 주는게 더 이쁘게 나온다. */
     display: inline-block;
 }
-main .bg2 .quiz_situation .status {}
-main .bg2 .quiz_situation .status h2 {}
-main .bg2 .quiz_situation .contents {}
-main .bg2 .quiz_situation .contents em {}
-main .bg2 .quiz_situation .contents span {}
-main .bg2 .quiz_situation .contents strong {}
-main .bg2 .quiz_situation p {}
+main .bg2 section #quiz .wwf_quiz .quiz_list+p {/* margin: 0 0 55px */}
+main .bg2 section #quiz .wwf_quiz .quiz_list+p #quiz_btn {
+    background-color: #050505;
+    color: #fff;
+    border-radius: 50px;
+    width: 450px;
+    line-height: 39px;
+}
+main .bg2 section #quiz .wwf_quiz p #quiz_btn {}
+main .bg2 section #quiz .wwf_quiz .quiz_list li input[name=quiz_q]:checked + label {
+    background-image: url(../images/quiz_checked.svg);
+}
+/* 퀴즈 참여 현황 */
+main .bg2 section .quiz_situation {
+    /* background-color: lime; */
+    padding: 115px 0 0;
+    display: flex; flex-flow: column wrap; align-items: flex-end;
+}
+main .bg2 section .quiz_situation .status {
+    width: 500px;
+    border-radius: 15px;
+    overflow: hidden; /* 자식의 기본 모양이 래디우스가 없는데 부모의 래디우스를 보이게 하려면 자식영역 가려주는것 */
+}
+main .bg2 section .quiz_situation .status h2 {
+    background-color: #FE9300;
+    color: #fff;
+    font-size: 1.625rem;
+    /* text-align: center; */
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .bg2 section .quiz_situation .status h2::before {
+    background-image: url(../images/icon_person.svg);
+    content: '';
+    display: inline-block;
+    width: 42px; height: 42px;
+}
+main .bg2 section .quiz_situation .contents {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+main .bg2 section .quiz_situation .contents em {
+    font-size: 4.375rem;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: #FE9300;
+}
+main .bg2 section .quiz_situation .contents span, 
+main .bg2 section .quiz_situation .contents strong {
+    font-size: 2.125rem;
+    font-weight: 700;
+}
+main .bg2 section .quiz_situation .contents span {color: #FE9300;}
+main .bg2 section .quiz_situation .contents strong {}
+main .bg2 section .quiz_situation p {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.25rem;
+}

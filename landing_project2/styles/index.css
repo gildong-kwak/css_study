@@ -1,0 +1,53 @@
+/* ----------------------------------------------------------배경 */
+main {}
+main .bg {}
+main .bg > section {width: 1250px; margin: 0 auto;}
+/* ----------------------------------------------------------배경이미지 */
+main .bg_1 {background-image: url(../images/bg_1.jpg);}
+/* ----------------------------------------------------------bg_1 */
+main .bg_1 section {}
+main .bg_1 section h1 {}
+main .bg_1 section h1 a {}
+main .bg_1 section h1 a img {margin-top: 50px;}
+main .bg_1 section h2,
+main .bg_1 section p {
+    font-family: 'Noto serif KR', serif;
+    color: #fff;
+    text-align: center;
+}
+main .bg_1 section h2 {
+    font-size: 6.25rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 100px auto 20px;
+}
+main .bg_1 section p {
+    font-size: 1.875rem;
+}
+main .bg_1 section .skypass_card {
+    background-color: #002F87;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1250px;
+    height: 100px;
+}
+main .bg_1 section .skypass_card::after,
+main .bg_1 section .skypass_card::before {
+    content: '';
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+main .bg_1 section .skypass_card::before {
+    background-image: url(../images/flight.svg);
+}
+main .bg_1 section .skypass_card::after {
+    background-image: url(../images/arrow.svg);
+}
