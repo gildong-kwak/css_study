@@ -1,13 +1,76 @@
 main {}
-/* 배경 공통.bg & 개별.bg1 값 */
+/* 배경 공통 & 개별값 + 공통 제목 */
 main .bg {
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover; /* bg cover란? 배경이미지가 적용된 요소의 크기에 자동으로 가로세로 크기를 맞춰 채운다는 뜻 */
 }
 main .bg > section {width: 1250px; margin: 0 auto;}
 main .bg1 {background-image: url(../images/bg.jpg); height: 824px;}
 main .bg2 {background-image: url(../images/bg_2.jpg);}
+main .bg3 {background-image: url(../images/bg_3.jpg);}
+main .bg4 {background-image: url(../images/bg_4.jpg);}
+main .bg5 {background-image: url(../images/bg_5.jpg);}
+main .bg6 {background-image: url(../images/bg_6.jpg);}
+main .bg7 {background-image: url(../images/bg_7.jpg);}
+main .bg8 {}
+main .bg9 {}
+main .bg10 {}
+main .bg11 {}
+main .bg12 {}
+main .bg section .sub_title {
+    color: #fff;
+    font-size: 3.438rem;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    line-height: 1.2;
+}
+main .bg section .sponsor_link {
+    /* 0% FE9300, 100% FF7300 */
+    /* CSS 회전각도단위 deg */
+    background: linear-gradient(90deg, #FE9300, #FF7300);
+    /* gradient적요을 위해 background통합속성을 사용했을 때 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(before, after)를 활용하는 것을 권장한다. */
+    display: flex;/* display: block; */ /* -> flex 이용으로 값 바꿔줌 */
+    justify-content: center; /* flex사용 */
+    align-items: center; /* flex사용 */
+    margin: 0 auto;
+    width: 409px;
+    height: 71px; /* flex사용으로 다시 넣어줌 */
+    /* line-height: 71px; */ /* height:71px; -> line-height:71px; 모양의 높이에서 글자를 중간으로 주려면 글자 높이로 바꿔준다. */ /* flex사용으로 가려줌 */
+    border-radius: 50px;
+    color: #fff;
+    /* text-align: center; */ /* flex사용으로 가려줌 */
+    font-size: 2.125rem;
+    font-weight: 700;
+}
     /* height: 500px; */ /* 여백은 내용의 여백을 주면서 커지게하는게 좋음 */
+    /* 4 / 6번 공통값 */
+main .bg section .th_title {
+    font-size: 3.438rem;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    color: #fff;
+    padding: 100px 0 50px;
+}
+main .bg section .th_title em {
+    font-weight: 700;
+    background-color: #fff;
+    color: #2E3148;
+    display: inline-block;
+    padding: 10px 0;
+}
+main .bg section .th_info {
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    /* margin: 92px 0 72px; */ /* 위,아래 여백 */
+}
+main .bg4 section p:last-child img,
+main .bg6 section p:last-child img {
+    width: 1250px; height: 625px;
+    padding: 50px 0 100px;
+}
 /* ---------------------------------------------------------------------------------------------1.표지 */
 main .bg1 section {/* background-color: purple; */}
 main .bg1 section h1 {}
@@ -31,24 +94,6 @@ main .bg1 section .sponsor_link::after {
     width: 32px;
     height: 32px;
     display: inline-block;
-}
-main .bg1 section .sponsor_link {
-    /* 0% FE9300, 100% FF7300 */
-    /* CSS 회전각도단위 deg */
-    background: linear-gradient(90deg, #FE9300, #FF7300);
-    /* gradient적요을 위해 background통합속성을 사용했을 때 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(before, after)를 활용하는 것을 권장한다. */
-    display: flex;/* display: block; */ /* -> flex 이용으로 값 바꿔줌 */
-    justify-content: center; /* flex사용 */
-    align-items: center; /* flex사용 */
-    margin: 0 auto;
-    width: 409px;
-    height: 71px; /* flex사용으로 다시 넣어줌 */
-    /* line-height: 71px; */ /* height:71px; -> line-height:71px; 모양의 높이에서 글자를 중간으로 주려면 글자 높이로 바꿔준다. */ /* flex사용으로 가려줌 */
-    border-radius: 50px;
-    color: #fff;
-    /* text-align: center; */ /* flex사용으로 가려줌 */
-    font-size: 2.125rem;
-    font-weight: 700;
 }
 main .bg1 section .sponsor_question {
     display: flex;
@@ -97,10 +142,7 @@ main .bg2 section #quiz {
 }
 main .bg2 section #quiz .wwf_quiz {}
 main .bg2 section #quiz .wwf_quiz h2 {
-    color: #fff;
-    font-size: 3.438rem;
-    font-weight: 600;
-    letter-spacing: -0.1px;
+    
     margin: 0 0 38px; /* margin-top:54px; margin-bottom:38px; */
     width: 450px; /* 퀴즈버튼의 너비 기준으로 */ text-align: center; /* 퀴즈 가운데로 배치  */
 }
@@ -188,3 +230,131 @@ main .bg2 section .quiz_situation p {
     margin-top: 20px;
     font-size: 1.25rem;
 }
+/* --------------------------------------------------------------------------3-동영상 */
+main .bg3 section {
+    padding: 70px 0 50px;
+    text-align: center;
+}
+main .bg3 section .sub_title {color: #000;}
+main .bg3 section .sub_title {}
+main .bg3 section #video {width: 900px; height: 600px; margin: 70px 0 45px;}
+main .bg3 section .sponsor_link {}
+/* --------------------------------------------------------------------------4-50 */
+main .bg4 section {
+    /* padding: 99px 0 126px; */ /* 맨위 맨아래 여백은 부모의 패딩으로 글씨 안은 자식의 마진으로 여백처리 */
+}
+main .bg4 section .th_title {
+    /* font-size: 3.438rem;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    color: #fff;
+    padding: 100px 0 50px; */
+}
+main .bg4 section .th_title em {
+    /* font-weight: 700;
+    background-color: #fff;
+    color: #2E3148;
+    display: inline-block;
+    padding: 10px 0; */
+}
+main .bg4 section .th_info {
+    /* font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin: 92px 0 72px; */ /* 위,아래 여백 */
+}
+main .bg4 section .th_title+p {} /* <- +p는 .th_title 바로 옆의 p라는 뜻 */
+main .bg4 section p:last-child {}
+main .bg4 section p:last-child img {
+    /* width: 1250px; height: 625px;
+    padding: 50px 0 100px; */
+}
+/* -------------------------------------------------------------------------------5-빙하 */
+main .bg5 section {
+    padding: 63px 0 177px;
+}
+main .bg5 section .sub_title {
+    font-size: 2.688rem;
+    font-weight: 700;
+    color: #050505;
+    text-align: center;
+}
+main .bg5 section .sub_title+p {
+    font-size: 1.625rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 24px 0 120px;
+    text-align: center;
+}
+main .bg5 section .bingha {
+    /* background-color: lime; */
+    display: flex;
+}
+main .bg5 section .bingha li {
+    background-color: #fff;
+    flex: 1; margin-right: 44px;
+    text-align: center;
+}
+main .bg5 section .bingha li:last-child {margin: 0;}
+main .bg5 section .bingha li .bg {
+    /* width: 387px; */ height: 320px;
+    padding-top: 48px;
+}
+main .bg5 section .bingha li:nth-child(1) .bg {
+    background-image: url(../images/box_img_1.jpg);
+}
+main .bg5 section .bingha li:nth-child(2) .bg {
+    background-image: url(../images/box_img_2.jpg);
+}
+main .bg5 section .bingha li:nth-child(3) .bg {
+    background-image: url(../images/box_img_3.jpg);
+}
+main .bg5 section .bingha li .bg h3,
+main .bg5 section .bingha li .bg p {
+    font-weight: 700;
+    color: #fff;
+}
+main .bg5 section .bingha li .bg h3 {
+    font-size: 2.688rem;
+    margin-bottom: 10px; /* 형제와 형제 사이 간격은 마진으로 준다. */
+}
+main .bg5 section .bingha li .bg p {
+    font-size: 1.625rem;
+}
+main .bg5 section .bingha li .contents {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    /* width: 387px; */ height: 250px;
+    /* padding: 10px 38px 0; */
+}
+/* ------------------------------------------------------------------------------6-위기 */
+main .bg6 section {}
+main .bg6 section .th_title {}
+main .bg6 section .th_title em {}
+main .bg6 section .th_info {}
+main .bg6 section p:last-child {}
+main .bg6 section p:last-child img {}
+/* ------------------------------------------------------------------------------4/6 그룹선택자 */
+/* main .bg4 section,
+main .bg6 section {}
+main .bg4 section .th_title,
+main .bg6 section .th_title {}
+main .bg4 section .th_title em,
+main .bg6 section .th_title em {}
+main .bg4 section .th_info,
+main .bg6 section .th_info {}
+main .bg4 section p:last-child,
+main .bg6 section p:last-child {}
+main .bg4 section p:last-child img,
+main .bg6 section p:last-child img {} */
+/* -----------------------------------------------------------------------------7-WWF */
+main .bg7 section {}
+main .bg7 section .sub_title {}
+main .bg7 section .sub_title+p {}
+main .bg7 section .sub_title+p em {}
+/* -----------------------------------------------------------------------------8-WWF */
+/* -----------------------------------------------------------------------------9-WWF */
+/* -----------------------------------------------------------------------------10-WWF */
+/* -----------------------------------------------------------------------------11-WWF */
+/* -----------------------------------------------------------------------------12-WWF */
