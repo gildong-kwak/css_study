@@ -1,0 +1,157 @@
+#app {
+    width: 375px;
+    height: 812px;
+    border: 1px solid black;
+    margin: 30px auto 0;
+    padding-top: 42px;
+}
+/* ---------------------------------------------------------------------레이아웃 */
+#app header {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+#app main {}
+/* ---------------------------------------------------------------------Header */
+#app header h1 {
+    font-size: 1.25rem;
+    display: flex;
+}
+/* ---------------------------------------------------------------------바로가기 */
+#app header .right {
+    display: flex;
+}
+#app header .right a {
+    width: 24px;
+    height: 24px;
+    background-color: gray;
+    margin-left: 16px; /* margin-right */
+    /* display: inline-block; */
+}
+#app header .right a:first-child {margin: 0;} /* last-child */
+/* ---------------------------------------------------------------------Right */
+#app main .adver {}
+#app main .adver1 {
+    margin: 0 0 15px;
+    background-color: gray; height: 85px;
+}
+/* ---------------------------------------------------------------------광고1 */
+#app main > h2 {
+    margin: 0 16px 15px;
+}
+#app main > h2 a {
+    font-size: 1.25rem;
+}
+#app main > h2 a span {
+    font-weight: 700;
+}
+/* ---------------------------------------------------------------------로그인 */
+#app main > .category {
+    border: 1px solid black;
+    margin: 0 16px 42px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px 0;
+}
+#app main > .category a {
+    border: 1px solid gray;
+    width: calc(100% / 4); /* 계산기 적용방법(산술연산 앞뒤로 공백주기!) (100%=부모의 값) */
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 0 0 24px;
+}
+#app main > .category a:nth-child(5), 
+#app main > .category a:nth-child(6),
+#app main > .category a:nth-child(7),
+#app main > .category a:nth-child(8) {margin: 0;} /* 메뉴 맨 아래 여백 없애기 */
+#app main > .category a img {
+    width: 42px;
+    height: 42px;
+    border: 1px solid black;
+    margin: 0 0 5px;
+}
+#app main > .category a img span {
+    font-size: 0.75rem;
+}
+/* ---------------------------------------------------------------------menu */
+#app main .notice {
+    padding: 16px; /* 내부여백 */
+    margin: 0 0 15px; /* 외부여백 */
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+#app main .notice img {
+    width: 24px;
+    height: 24px;
+    border: 1px solid gray;
+    margin-right: 16px;
+}
+#app main .notice a {
+    font-size: 0.75rem;
+}
+/* ---------------------------------------------------------------------공지사항&이벤트 */
+#app main .adver2 {
+    margin: 0 0 15px;
+    background-color: gray; height: 85px;
+}
+/* ---------------------------------------------------------------------광고2 */
+#app main .service {}
+/* ---------------------------------------------------------------------전체서비스 시작 */
+#app main .service .top {
+    padding: 16px 16px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0;
+}
+#app main .service .top h2 {}
+/* ---------------------------------------------------------------------left */
+#app main .service .top a {
+    display: flex;
+    align-items: center;
+}
+#app main .service .top a img {
+    width: 16px;
+    height: 16px;
+    border: 1px solid gray;
+    margin-right: 10px;
+}
+#app main .service .top a span {
+    font-size: 0.75rem;
+}
+/* ---------------------------------------------------------------------right */
+#app main .service h3 {
+    font-size: 0.75rem;
+    padding: 16px 16px;
+    border: 1px solid black;
+    margin: 0 0 14px;
+}
+/* ---------------------------------------------------------------------뉴스 */
+#app main .service .news_category {
+    border: 1px solid black;
+    margin: 0 16px;
+    display: flex;
+    flex-flow: row wrap;
+}
+#app main .service .news_category a {
+    border: 1px solid gray;
+    width: calc(100% / 2);
+    display: flex; /* 이미지와 글자 배치 */
+    align-items: center; /* 이미지와 글자 배치 */
+    margin: 0 0 10px;
+}
+/* #app main .service .news_category a:nth-child(3),
+#app main .service .news_category a:nth-child(4) {margin: 0;} */ /* 아래 여백 빼고싶을때 */
+#app main .service .news_category a img {
+    width: 24px;
+    height: 24px;
+    background-color: gray;
+    margin-right: 10px;
+}
+#app main .service .news_category a span {
+    font-size: 0.875rem;
+}
+/* ---------------------------------------------------------------------뉴스 메뉴 */

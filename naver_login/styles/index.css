@@ -1,0 +1,95 @@
+#app {
+    width: 375px;
+    height: 812px; /* 와이어프레임 기준 임시높이 값 */
+    border: 1px solid black; /* 경계 구분용 */
+    margin: 30px auto 0 ; /* 30px는 임시용 - 실제 디자인에서는 넣지 않음 */
+    padding-top: 42px;
+    /* nav 하단 고정 필요 속성 */
+    position: relative;
+}
+/* ---------------------------------------------------------------------레이아웃 */
+#app  header {
+    display: flex; /* 왼쪽 / 오른쪽 한줄로 만들기 */
+    justify-content: space-between; /* 왼쪽 / 오른쪽 양쪽으로 배치 */
+    align-items: center; /* 높이 값을 줘 위로 뜨는걸 중간으로 배치 */
+    padding: 0 16px;
+    height: 56px;
+    border: 1px solid black; /* 경계 구분용 */
+}
+#app  main {
+    padding-top: 184px;
+    height: 658px; /* 탑에서 하단까지의 길이 */
+    overflow-y: auto; /* 하단 광고의 잘림부분 가리기 */
+}
+#app  nav {
+    display: flex;
+    padding: 0 16px;
+    height: 56px;
+    border: 1px solid black;
+    /* 위치 하단 고정 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* ---------------------------------------------------------------------Header */
+#app header a {width: 24px; height: 24px; background-color: gray;}
+#app header .left {display: flex;}
+#app header .left a {margin-right: 16px;}
+#app header .left a:last-child {margin: 0;}
+#app header .left .all_nav {}
+#app header .left .all_.pay {}
+#app header .right {display: flex;}
+#app header .right a {margin-left: 16px;}
+#app header .right a:first-child {margin: 0;}
+#app header .right .chat {}
+#app header .right .alarm {}
+#app header .right .my_page {}
+/* ---------------------------------------------------------------------Main */
+/* ---------------------------------------------------------------------Main=search Form */
+#app main #search_frm {padding: 0 16px;} /* 검색창 바깥 여백 */
+#app main #search_frm .search_g {
+    border: 1px solid black;
+    border-radius: 171px;
+    padding: 10px 24px; /* 높이 값이 아닌 상, 하, 좌, 우 여백의 값을 줌 */
+    display: flex; /* 양옆으로 한줄 배치하기 */
+    justify-content: space-between; /* 양족으로 균등하게 배치 */
+}
+#app main #search_frm .search_g > img[alt=logo] {width: 24px; height: 24px;}
+#app main #search_frm .search_g > input[name^=search] {border: 0; outline: none;} /* 스트로크를 안보이게 함 / outline은 검색창이 활성화 되었을때 뜨는 스트로크를 가리기 위함 */
+#app main #search_frm .search_g > #search_btn {overflow: hidden;/* 글자가 밖으로 나가지 않게 가리기 */ width: 24px; height: 24px;}
+#app main #search_frm .search_g > #search_btn img {}
+/* ---------------------------------------------------------------------Main=광고, 블로그, 날씨 */
+#app main .adver {}
+#app main .adver1 {
+    margin: 25px 16px 139px;
+    background-color: gray; height: 16px; /* 구분용 */
+}
+#app main .adver2 {
+    background-color: gray; height: 74px;
+    margin: 0 16px 16px;
+}
+#app main .weather_g {
+    display: flex;
+    margin: 0 16px 10px;
+}
+#app main .weather_g li {
+    flex: 1; /* 비율 동일하게 넣기 */
+    background-color: gray; height: 66px;
+}
+#app main .weather_g li:first-child {margin-right: 9.5px;}
+#app main .blog_g {
+    background-color: gray; height: 130px;
+    margin: 0 16px;
+}
+/* ---------------------------------------------------------------------Nav */
+#app nav a {
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+#app nav a img {}
+#app nav a span {}
