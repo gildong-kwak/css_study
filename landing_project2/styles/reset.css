@@ -19,3 +19,11 @@ th {text-align:left;}
 fieldset {border:0;}
 .skip {display:none;} /* 만약 숨기려는 클래스가 skip이라면 화면에 보이지 않게 클래스 처리를 none으로 한다 */
 input, button, label {cursor: pointer;}
+/* font-awesome 전용속성값 */
+.fa {
+    font-weight: 600;
+    font-family: 
+        'Font Awesome 5 Free',
+        'Font Awesome 5 Brands',
+        'Font Awesome 5 Solid';
+}

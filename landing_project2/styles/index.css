@@ -4,11 +4,23 @@ main .bg {}
 main .bg > section {width: 1250px; margin: 0 auto;}
 /* ----------------------------------------------------------배경이미지 */
 main .bg_1 {background-image: url(../images/bg_1.jpg);}
+main .bg_2-3 {background-image: url(../images/bg_2-3.jpg);}
+main .bg_4 {background-image: url(../images/bg_4.jpg);}
+main .bg_5 {background-image: url(../images/bg_5.jpg);}
+main .bg_6 {background-image: url(../images/bg_6.jpg);}
+main .bg_7 {background-image: url(../images/bg_7.jpg);}
+main .bg_8 {background-image: url(../images/bg_8.jpg);}
+main .bg_9 {background-image: url(../images/bg_9.jpg);}
+main .bg_10 {background-image: url(../images/bg_10.jpg);}
+main .bg_11 {background-image: url(../images/bg_11.jpg);}
+main .bg_12 {background-image: url(../images/bg_12.jpg);}
 /* ----------------------------------------------------------bg_1 */
-main .bg_1 section {}
+main .bg_1 section {
+    padding: 50px 0 50px;
+}
 main .bg_1 section h1 {}
 main .bg_1 section h1 a {}
-main .bg_1 section h1 a img {margin-top: 50px;}
+main .bg_1 section h1 a img {}
 main .bg_1 section h2,
 main .bg_1 section p {
     font-family: 'Noto serif KR', serif;
@@ -23,8 +35,9 @@ main .bg_1 section h2 {
 }
 main .bg_1 section p {
     font-size: 1.875rem;
+    margin-bottom: 457px;
 }
-main .bg_1 section .skypass_card {
+main .bg_1 section .s_c_join {
     background-color: #002F87;
     color: #fff;
     font-size: 2.5rem;
@@ -37,17 +50,18 @@ main .bg_1 section .skypass_card {
     width: 1250px;
     height: 100px;
 }
-main .bg_1 section .skypass_card::after,
-main .bg_1 section .skypass_card::before {
+main .bg_1 section .s_c_join::after,
+main .bg_1 section .s_c_join::before {
     content: '';
     background-repeat: no-repeat;
     width: 50px;
     height: 50px;
     display: inline-block;
 }
-main .bg_1 section .skypass_card::before {
+main .bg_1 section .s_c_join::before {
     background-image: url(../images/flight.svg);
 }
-main .bg_1 section .skypass_card::after {
+main .bg_1 section .s_c_join::after {
     background-image: url(../images/arrow.svg);
 }
+/* ----------------------------------------------------------bg_2-3 */
