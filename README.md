@@ -150,4 +150,7 @@
 4. `flex-start` : 교차축 기준 container의 start 시작 위치(top or left)
 5. `flex-end` : 교차축 기준 container의 end 종료 위치(bottom or right)
 6. `center` : 교차축 기준 container의 center 중심 위치(center, middle)
-7. `baseline` : 교차축 기준 container의 baseline 위치(내용 크기에 따라 다름(기본은 start동일))
+7. `baseline` : 교차축 기준 container의 baseline 위치(내용 크기에 따라 다름(기본은 start동일)
+# Font-Awesome
+## font-awesome : HTML
+## font-awesome : CSS
