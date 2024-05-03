@@ -13,7 +13,7 @@ main .bg4 {background-image: url(../images/bg_4.jpg);}
 main .bg5 {background-image: url(../images/bg_5.jpg);}
 main .bg6 {background-image: url(../images/bg_6.jpg);}
 main .bg7 {background-image: url(../images/bg_7.jpg);}
-main .bg8 {}
+main .bg8 {background-image: url(../images/bg_8.jpg);}
 main .bg9 {}
 main .bg10 {}
 main .bg11 {}
@@ -354,6 +354,65 @@ main .bg7 section .sub_title {}
 main .bg7 section .sub_title+p {}
 main .bg7 section .sub_title+p em {}
 /* -----------------------------------------------------------------------------8-WWF */
+main .bg8 section {
+    padding: 55px 0 80px;
+}
+main .bg8 section .sub_title {
+    text-align: center;
+    color: #000;
+    font-size: 2.688rem;
+    margin: 0 0 44px;
+}
+main .bg8 section .container {
+    display: flex; /* 왼쪽 오른쪽으로 나눠진걸 부모에서 값을 줌 */
+    justify-content: space-between; /* 좌 우로 나눠진 간격 주기 위함 */
+}
+main .bg8 section .container > * {
+    width: calc((100% - 40px) / 2); /* flex값 1을 중목으로 주는게 아닌 공통으로 한번에 줄때 */
+}
+main .bg8 section .container .left {
+    /* background-color: pink; */ /* flex: 1; */ /* 크기 값 */
+}
+main .bg8 section .container .left li {
+    height: 264px; /* flex는 형제끼리 크기를 맞춰주는 특징이 있다. 여기 하나만 줘도 크기가 맞춰짐 */
+    /* background-color: purple; */
+}
+main .bg8 section .container .left li:first-child {
+    margin: 0 0 26px;
+    background-image: url(../images/wwf_img1.jpg);
+}
+main .bg8 section .container .left li:last-child {
+    background-image: url(../images/wwf_img2.jpg);
+}
+main .bg8 section .container .right {
+    /* background-color: skyblue; */ /* flex: 1; */ /* 크기 값 */
+    background-image: url(../images/wwf_img3.jpg);
+}
+/* 공통 */
+main .bg8 section .container .left li,
+main .bg8 section .container .right {
+    position: relative;
+}
+main .bg8 section .container /* 중간부모생략 */ dl {
+    background-color: rgba(5,5,5,0.5);
+    position: absolute;
+    /* absolute 설정 요소는 블록 요소여도 inline-block처럼 내용 크기만큼만 인식한다. */
+    /* absolute 설정 요소의 기본 너비 100%를 유지하고 싶다면 absolute는 inline-block처럼 너비를 내용만큼만 인식하니까 반드시 width:100%를 추가로 입력해서 적용해야 한다! */
+    left: 0;
+    bottom: 24px;
+    padding: 20px;
+}
+main .bg8 section .container dl * {
+    color: #fff;
+}
+main .bg8 section .container dl dt {
+    font-size: 2.125rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+main .bg8 section .container dl dd {
+    font-size: 1.625rem;
+}
 /* -----------------------------------------------------------------------------9-WWF */
 /* -----------------------------------------------------------------------------10-WWF */
 /* -----------------------------------------------------------------------------11-WWF */
